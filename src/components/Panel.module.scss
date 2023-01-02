@@ -1,0 +1,54 @@
+.Panel {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.Panel[type="dark"] {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.Panel[type="dark"] .Panel__Content .Content {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Content__Image {
+  margin: 0;
+  margin-right: 1%;
+  height: 300px;
+}
+
+.Image {
+  height: 100%;
+}
+
+.Panel[type="dark"] .Panel__Content .Content .Content__Image {
+  margin: 0;
+  margin-left: 1%;
+}
+
+.Panel__Title {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+}
+
+.Panel[type="dark"] .Panel__Title {
+  flex-direction: row-reverse;
+}
+
+@media (orientation: portrait) {
+  .Panel[type="dark"] .Panel__Content .Content,
+  .Content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

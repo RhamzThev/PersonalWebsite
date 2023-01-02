@@ -8,7 +8,6 @@ function Title() {
       <div className={styles.Title__Text}>
         <h1 className={styles.Text__Main}>Rhamsez Thevenin</h1>
         <h2 className={styles.Text__Sub}>Software Engineer</h2>
-        <h3 className={styles.Text__Sub}>Coming soon...</h3>
       </div>
       <div className={styles.Title__Img}>
         <img className={styles.Img} src={rozeJpg.src} alt="Roze Image" />

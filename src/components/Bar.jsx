@@ -3,10 +3,26 @@ import styles from "./Bar.module.scss";
 function Items() {
   return (
     <ul className={styles.Items}>
-      <li className={styles.Item}>About Me</li>
-      <li className={styles.Item}>Experience</li>
-      <li className={styles.Item}>Projects</li>
-      <li className={styles.Item}>Contact</li>
+      <li className={styles.Item}>
+        <a className={styles.Item_Href} href="#about_me">
+          About Me
+        </a>
+      </li>
+      <li className={styles.Item}>
+        <a className={styles.Item_Href} href="#experience">
+          Experience
+        </a>
+      </li>
+      <li className={styles.Item}>
+        <a className={styles.Item_Href} href="#projects">
+          Projects
+        </a>
+      </li>
+      <li className={styles.Item}>
+        <a className={styles.Item_Href} href="#contact">
+          Contact
+        </a>
+      </li>
     </ul>
   );
 }

@@ -1,13 +1,15 @@
 .Sidebar {
-  position: fixed;
+  position: absolute;
   color: var(--foreground);
   z-index: 3;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .Sidebar__Burger {
+  position: absolute;
+  z-index: 3;
   display: flex;
   align-items: center;
 
@@ -57,6 +59,7 @@
   width: 22px;
   height: 2px;
   transition: 0.25s ease-out;
+  box-shadow: 0 0 3px black;
 }
 
 .Burger::before,
@@ -73,11 +76,13 @@
 }
 
 .Sidebar__Items {
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
 
-  width: 100vw;
-  height: 100vh;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
 
   right: 100%;
   transition: 0.25s ease-out;
@@ -89,6 +94,7 @@
 
 .Navbar {
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
   color: var(--foreground);
   z-index: 3;
   width: 100vw;
@@ -103,11 +109,15 @@
 }
 
 .Item {
-  font-size: large;
-  color: white;
   transition: all 0.125s ease-out;
   border-bottom: 0.5px solid transparent;
   cursor: pointer;
+}
+
+.Item_Href {
+  font-size: large;
+  color: white;
+  text-decoration: none;
 }
 
 .Item:hover {
@@ -117,6 +127,11 @@
 
 .Bar__Sidebar {
   display: none;
+  position: fixed;
+  z-index: 4;
+
+  width: 100%;
+  height: 100%;
 }
 
 @media (orientation: portrait) {
@@ -132,12 +147,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 100vw;
-    height: 25vh;
+    width: 100%;
+    height: 25%;
 
     padding: 0;
 
-    margin-top: 22px;
+    margin-top: 66px;
     margin-left: 22px;
   }
 
