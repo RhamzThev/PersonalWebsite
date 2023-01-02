@@ -1,0 +1,142 @@
+.Sidebar {
+  position: fixed;
+  color: var(--foreground);
+  z-index: 3;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.Sidebar__Burger {
+  display: flex;
+  align-items: center;
+
+  width: 22px;
+  height: 22px;
+
+  margin: 22px;
+  margin-bottom: 0;
+}
+
+.BurgerCheck {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+
+  width: 22px;
+  height: 22px;
+
+  margin: 22px;
+  margin-bottom: 0;
+
+  opacity: 0;
+}
+
+.BurgerCheck:checked ~ .Sidebar__Burger .Burger::before {
+  top: 0;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+
+.BurgerCheck:checked ~ .Sidebar__Burger .Burger {
+  background: rgba(0, 0, 0, 0);
+}
+
+.BurgerCheck:checked ~ .Sidebar__Burger .Burger::after {
+  top: 0;
+  transform: rotate(-45deg);
+  opacity: 1;
+}
+
+.Burger,
+.Burger::before,
+.Burger::after {
+  position: absolute;
+  background-color: white;
+  width: 22px;
+  height: 2px;
+  transition: 0.25s ease-out;
+}
+
+.Burger::before,
+.Burger::after {
+  content: "";
+}
+
+.Burger::before {
+  top: -8px;
+}
+
+.Burger::after {
+  top: 8px;
+}
+
+.Sidebar__Items {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  width: 100vw;
+  height: 100vh;
+
+  right: 100%;
+  transition: 0.25s ease-out;
+}
+
+.BurgerCheck:checked ~ .Sidebar__Items {
+  right: 0;
+}
+
+.Navbar {
+  position: fixed;
+  color: var(--foreground);
+  z-index: 3;
+  width: 100vw;
+}
+
+.Items {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  padding: 2.5%;
+}
+
+.Item {
+  font-size: large;
+  color: white;
+  transition: all 0.125s ease-out;
+  border-bottom: 0.5px solid transparent;
+}
+
+.Item:hover {
+  border-color: var(--foreground);
+  font-weight: bold;
+}
+
+.Bar__Sidebar {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .Bar__Sidebar {
+    display: block;
+  }
+
+  .Bar__Navbar {
+    display: none;
+  }
+
+  .Items {
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100vw;
+    height: 25vh;
+
+    padding: 0;
+
+    margin-top: 22px;
+    margin-left: 22px;
+  }
+}
