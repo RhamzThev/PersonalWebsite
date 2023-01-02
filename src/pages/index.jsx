@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Landing from "../components/Landing";
 import styles from "../styles/index.module.scss";
-import Navbar from "../components/Navbar";
+import Bar from "../components/Bar";
 
 export default function Index() {
   return (
@@ -13,7 +13,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar/>
+        <Bar />
         <Landing>
           {/* <div className={styles.content}>
             <p>Example Content</p>
