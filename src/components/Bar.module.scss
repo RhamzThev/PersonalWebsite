@@ -107,6 +107,7 @@
   color: white;
   transition: all 0.125s ease-out;
   border-bottom: 0.5px solid transparent;
+  cursor: pointer;
 }
 
 .Item:hover {
@@ -138,5 +139,9 @@
 
     margin-top: 22px;
     margin-left: 22px;
+  }
+
+  .Item:hover {
+    border-color: transparent;
   }
 }
