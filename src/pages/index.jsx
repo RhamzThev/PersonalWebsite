@@ -15,18 +15,6 @@ export default function Index() {
       <main>
         <Bar />
         <Landing>
-          {/* <div className={styles.content}>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-            <p>Example Content</p>
-          </div> */}
         </Landing>
       </main>
     </div>
