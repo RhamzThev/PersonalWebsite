@@ -1,7 +1,8 @@
 .Sidebar {
   position: fixed;
-  color: var(--foreground);
-  z-index: 3;
+  color: var(--color-palette-pure-white);
+  z-index: 1;
+  pointer-events: none;
 
   width: 100vw;
   height: 100vh;
@@ -22,7 +23,8 @@
   position: absolute;
   display: flex;
   align-items: center;
-  z-index: 4;
+  z-index: 2;
+  pointer-events: all;
 
   width: 22px;
   height: 22px;
@@ -33,17 +35,17 @@
   opacity: 0;
 }
 
-.BurgerCheck:checked ~ .Sidebar__Burger .Burger::before {
+.BurgerCheck:checked~.Sidebar__Burger .Burger::before {
   top: 0;
   transform: rotate(45deg);
   opacity: 1;
 }
 
-.BurgerCheck:checked ~ .Sidebar__Burger .Burger {
+.BurgerCheck:checked~.Sidebar__Burger .Burger {
   background: rgba(0, 0, 0, 0);
 }
 
-.BurgerCheck:checked ~ .Sidebar__Burger .Burger::after {
+.BurgerCheck:checked~.Sidebar__Burger .Burger::after {
   top: 0;
   transform: rotate(-45deg);
   opacity: 1;
@@ -53,10 +55,12 @@
 .Burger::before,
 .Burger::after {
   position: absolute;
-  background-color: white;
+  background-color: var(--color-palette-pure-white);
   width: 22px;
   height: 2px;
   transition: 0.25s ease-out;
+
+  z-index: 1;
 }
 
 .Burger::before,
@@ -74,23 +78,27 @@
 
 .Sidebar__Items {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4rem);
 
   width: 100vw;
   height: 100vh;
 
+  top: 0;
   right: 100%;
   transition: 0.25s ease-out;
 }
 
-.BurgerCheck:checked ~ .Sidebar__Items {
+.BurgerCheck:checked~.Sidebar__Items {
   right: 0;
+  pointer-events: all;
 }
 
 .Navbar {
   position: fixed;
-  color: var(--foreground);
-  z-index: 3;
+  backdrop-filter: blur(4rem);
+  color: var(--color-palette-pure-white);
+  z-index: 1;
   width: 100vw;
 }
 
@@ -99,19 +107,24 @@
   flex-direction: row;
   list-style: none;
   justify-content: space-around;
-  padding: 2.5%;
+  padding: 1.5% 5%;
 }
 
 .Item {
-  font-size: large;
-  color: white;
+  font-size: 1.5rem;
+  color: var(--color-palette-pure-white);
   transition: all 0.125s ease-out;
-  border-bottom: 0.5px solid transparent;
+
   cursor: pointer;
+
+  a {
+    color: var(--color-palette-pure-white);
+    text-decoration: none;
+  }
 }
 
 .Item:hover {
-  border-color: var(--foreground);
+  border-color: var(--color-palette-pure-white);
   font-weight: bold;
 }
 
@@ -130,15 +143,19 @@
 
   .Items {
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     width: 100vw;
     height: 25vh;
 
     padding: 0;
 
-    margin-top: 22px;
+    margin-top: 66px;
     margin-left: 22px;
+  }
+
+  .Item {
+    width: 0%;
   }
 
   .Item:hover {

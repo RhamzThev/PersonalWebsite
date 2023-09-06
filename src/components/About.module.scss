@@ -1,4 +1,4 @@
-.landingContainer {
+.aboutContainer {
     height: 100%;
     width: 100%;
 
@@ -9,15 +9,64 @@
     align-items: center;
 }
 
-.landing {
+.about {
     width: 100%;
     height: 100%;
 
     display: flex;
     flex-direction: row;
 
+    justify-content: center;
+    align-items: center;
+}
+
+.photoContainer {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 2.5%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
     align-items: center;
     justify-content: center;
+
+    filter: drop-shadow(0 0.5rem 0.25rem black);
+}
+
+.subtract {
+    width: 100%;
+    position: absolute;
+    transform: translateX(2.5%) translateY(2.5%);
+}
+
+.image {
+    width: 100%;
+}
+
+.design {
+    height: 0.33rem;
+    width: 100%;
+
+    margin-top: 0.67rem;
+
+    background-color: var(--primary);
 }
 
 .textContainer {
@@ -26,12 +75,14 @@
 
     display: flex;
     flex-direction: column;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    padding-left: 5%;
-    padding-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 5%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .text {
@@ -58,9 +109,8 @@
 
 .subtitle {
     color: var(--color-palette-pure-white);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", Helvetica;
     font-size: 3.5rem;
-    margin-left: 2.5rem;
 }
 
 .titleContainer {
@@ -75,67 +125,48 @@
 }
 
 .title {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 4.5rem;
-    color: var(--color-palette-pure-white);
-}
-
-.name {
     color: var(--primary);
+    font-family: "Roboto Mono", Helvetica;
+    font-size: 4.5rem;
     font-weight: 700;
 }
 
-.photoContainer {
-    width: 40%;
-    height: 100%;
+.contentContainer {
+    width: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
 
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-
-    padding-left: 2.5%;
-    padding-right: 5%;
 }
 
-.photo {
-    width: 100%;
-    height: 100%;
+.content {
+    color: var(--color-palette-light-gray);
+    font-family: "Roboto", Helvetica;
+    font-size: 1.5rem;
 
-    display: flex;
-    flex-direction: column;
+    a {
+        color: var(--primary);
+        text-decoration: none;
+    }
 
-    align-items: center;
-    justify-content: center;
-
-    filter: drop-shadow(0 0.5rem 0.25rem black);
-}
-
-.subtract {
-    width: 100%;
-    position: absolute;
-    transform: translateY(187.5%);
-}
-
-.image {
-    width: 100%;
 }
 
 @media (orientation: portrait) {
-    .landing {
+    .about {
         width: 90%;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .textContainer {
         width: 100%;
-        height: 50%;
+        height: auto;
 
         padding-left: 0;
         padding-right: 0;
 
-        padding-top: 10%;
         padding-bottom: 5%;
 
         text-align: center;
@@ -158,6 +189,10 @@
         font-size: 6.25vw;
     }
 
+    .content {
+        font-size: 5vw;
+    }
+
     .photoContainer {
         width: auto;
         height: 50%;
@@ -166,6 +201,5 @@
         padding-right: 0;
 
         padding-top: 5%;
-        padding-bottom: 5%;
     }
 }

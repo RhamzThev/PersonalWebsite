@@ -1,29 +1,36 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./Landing.module.scss";
-import rozeJpg from "../public/roze.jpg";
+import Panel from "./Panel";
 
-function Title() {
+const Landing = () => {
   return (
-    <div className={styles.Title}>
-      <div className={styles.Title__Text}>
-        <h1 className={styles.Text__Main}>Rhamsez Thevenin</h1>
-        <h2 className={styles.Text__Sub}>Software Engineer</h2>
-        <h3 className={styles.Text__Sub}>Coming soon...</h3>
+    <Panel>
+      <div className={styles.landingContainer}>
+        <div className={styles.landing}>
+          <div className={styles.textContainer}>
+            <div className={styles.text}>
+              <div className={styles.subtitleContainer}>
+                <div className={styles.subtitle}>Hi, I&apos;m</div>
+              </div>
+              <div className={styles.titleContainer}>
+                <div className={styles.title}>
+                  <span className={styles.caret}>&lt;</span>
+                  <span className={styles.name}>Rhamsez Thevenin</span>
+                  <span className={styles.caret}>/&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.photoContainer}>
+            <div className={styles.photo}>
+              <img className={styles.subtract} alt="Design" src="landing.svg" />
+              <img className={styles.image} alt="Portrait" src="landing.png" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className={styles.Title__Img}>
-        <img className={styles.Img} src={rozeJpg.src} alt="Roze Image" />
-      </div>
-    </div>
+    </Panel>
   );
-}
+};
 
-export default function Landing({ children }) {
-  return (
-    <div className={styles.Landing}>
-      <div className={styles.Landing__Title}>
-        <Title />
-      </div>
-      <div className={styles.Landing__Content}>{children}</div>
-    </div>
-  );
-}
+export default Landing

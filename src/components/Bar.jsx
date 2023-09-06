@@ -1,11 +1,17 @@
+import Link from "next/link";
 import styles from "./Bar.module.scss";
 
 function Items() {
   return (
     <ul className={styles.Items}>
-      <li className={styles.Item}>About Me</li>
-      <li className={styles.Item}>Experience</li>
-      <li className={styles.Item}>Projects</li>
+      <li className={styles.Item}>
+        <Link href="#about">About</Link>
+      </li>
+      <li className={styles.Item}>
+        <Link href="#experience">
+          Experience
+        </Link>
+      </li>
       <li className={styles.Item}>Contact</li>
     </ul>
   );
