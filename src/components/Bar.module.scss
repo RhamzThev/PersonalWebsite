@@ -12,10 +12,10 @@
   display: flex;
   align-items: center;
 
-  width: 22px;
-  height: 22px;
+  width: 7.5vw;
+  height: 7.5vw;
 
-  margin: 22px;
+  margin: 7.5vw;
   margin-bottom: 0;
 }
 
@@ -26,10 +26,10 @@
   z-index: 2;
   pointer-events: all;
 
-  width: 22px;
-  height: 22px;
+  width: 7.5vw;
+  height: 7.5vw;
 
-  margin: 22px;
+  margin: 7.5vw;
   margin-bottom: 0;
 
   opacity: 0;
@@ -56,8 +56,8 @@
 .Burger::after {
   position: absolute;
   background-color: var(--color-palette-pure-white);
-  width: 22px;
-  height: 2px;
+  width: 7.5vw;
+  height: 0.5vw;
   transition: 0.25s ease-out;
 
   z-index: 1;
@@ -69,11 +69,11 @@
 }
 
 .Burger::before {
-  top: -8px;
+  top: -2.5vw;
 }
 
 .Burger::after {
-  top: 8px;
+  top: 2.5vw;
 }
 
 .Sidebar__Items {
@@ -125,15 +125,15 @@
 }
 
 .ItemImgContainer {
-  height: 5rem;
+  width: 5vw;
 }
 
 .ItemImg {
-  height: 5rem;
+  width: 5vw;
 }
 
 .Item {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   color: var(--color-palette-pure-white);
   transition: all 0.125s ease-out;
 
@@ -151,11 +151,11 @@
 }
 
 .ContactItemContainer {
-  height: 3rem;
+  height: 4vh;
   background-color: var(--color-palette-pure-white);
   color: var(--color-palette-dark-gray);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5vh 1vw;
+  border-radius: 1vh;
 
   display: flex;
   align-items: center;
@@ -181,6 +181,10 @@
     display: none;
   }
 
+  .Items {
+    padding: 0;
+  }
+
   .ItemLinks {
     flex-direction: column;
     // justify-content: space-between;
@@ -192,11 +196,12 @@
 
     padding: 0;
 
-    margin-top: 66px;
-    margin-left: 0px;
+    margin-top: 22.5vw;
+    margin-left: 7.5vw;
   }
 
   .Item {
+    font-size: 7.5vw;
     width: auto;
   }
 
