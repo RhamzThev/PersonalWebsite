@@ -96,7 +96,7 @@
 
 .Navbar {
   position: fixed;
-  backdrop-filter: blur(4rem);
+  // backdrop-filter: blur(4rem);
   color: var(--color-palette-pure-white);
   z-index: 1;
   width: 100vw;
@@ -106,8 +106,30 @@
   display: flex;
   flex-direction: row;
   list-style: none;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
   padding: 1.5% 5%;
+  filter: drop-shadow(0 0.25rem 0.25rem black);
+  font-weight: 700;
+}
+
+.ItemLinks {
+  width: 40%;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ItemImgContainer {
+  height: 5rem;
+}
+
+.ItemImg {
+  height: 5rem;
 }
 
 .Item {
@@ -128,6 +150,20 @@
   font-weight: bold;
 }
 
+.ContactItemContainer {
+  height: 3rem;
+  background-color: var(--color-palette-pure-white);
+  color: var(--color-palette-dark-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0.5rem 0.25rem black);
+}
+
+.ContactItem {}
+
 .Bar__Sidebar {
   display: none;
 }
@@ -141,9 +177,15 @@
     display: none;
   }
 
-  .Items {
+  .ItemLogo {
+    display: none;
+  }
+
+  .ItemLinks {
     flex-direction: column;
     // justify-content: space-between;
+
+    align-items: start;
 
     width: 100vw;
     height: 25vh;
@@ -151,11 +193,11 @@
     padding: 0;
 
     margin-top: 66px;
-    margin-left: 22px;
+    margin-left: 0px;
   }
 
   .Item {
-    width: 0%;
+    width: auto;
   }
 
   .Item:hover {

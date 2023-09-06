@@ -1,0 +1,88 @@
+.ContactContainer {
+    width: 50vw;
+    height: 20vh;
+
+    color: var(--color-palette-pure-white);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 25vw;
+}
+
+.ContactContainer * {
+    z-index: 0;
+    cursor: default;
+    user-select: none;
+}
+
+.Contact {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+        color: var(--color-palette-pure-white);
+    }
+}
+
+.GitHubContainer,
+.EmailContainer,
+.LinkedInContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0.5rem 0.25rem black);
+}
+
+.GitHub,
+.Email,
+.LinkedIn {
+    height: 5vh;
+    cursor: pointer;
+}
+
+.CopyrightContainer {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.Copyright {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+
+    .ContactContainer {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .GitHub,
+    .Email,
+    .LinkedIn {
+        width: 12vw;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .Copyright {
+        font-size: 4vw;
+    }
+}
