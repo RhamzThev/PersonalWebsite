@@ -59,6 +59,7 @@
     color: var(--color-palette-pure-white);
     font-family: "Roboto", Helvetica;
     font-size: 3vw;
+    filter: drop-shadow(0 0 1.5px var(--color-palette-pure-white));
 }
 
 .titleContainer {
@@ -77,6 +78,7 @@
     font-family: "Roboto Mono", Helvetica;
     font-size: 4vw;
     font-weight: 700;
+    filter: drop-shadow(0 0 4.5px var(--primary));
 }
 
 .contentContainer {
@@ -144,7 +146,15 @@
     border-radius: 0.25rem;
 
     background-color: var(--primary);
+    filter: drop-shadow(0 0 3px var(--primary));
     cursor: pointer;
+
+    transition: all 0.25s;
+}
+
+.upContainer:hover,
+.downContainer:hover {
+    transform: scale(1.025);
 }
 
 .up,
@@ -199,6 +209,7 @@
     margin-top: 0.67rem;
 
     background-color: var(--primary);
+    filter: drop-shadow(0 0 3px var(--primary));
 }
 
 @media (orientation: portrait) {

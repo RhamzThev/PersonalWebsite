@@ -11,6 +11,8 @@
     justify-content: space-evenly;
 
     padding: 0 25vw;
+
+    filter: drop-shadow(0 0.5rem 0.25rem black);
 }
 
 .ContactContainer * {
@@ -43,7 +45,6 @@
 
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(0 0.5rem 0.25rem black);
 }
 
 .GitHub,
@@ -51,6 +52,15 @@
 .LinkedIn {
     height: 5vh;
     cursor: pointer;
+
+    transition: all 0.25s;
+}
+
+.GitHub:hover,
+.Email:hover,
+.LinkedIn:hover {
+    filter: drop-shadow(0 0 1px white);
+    transform: scale(1.1);
 }
 
 .CopyrightContainer {

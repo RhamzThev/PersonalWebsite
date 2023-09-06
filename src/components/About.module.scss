@@ -67,6 +67,7 @@
     margin-top: 0.67rem;
 
     background-color: var(--primary);
+    filter: drop-shadow(0 0 3px var(--primary));
 }
 
 .textContainer {
@@ -111,6 +112,7 @@
     color: var(--color-palette-pure-white);
     font-family: "Roboto", Helvetica;
     font-size: 3vw;
+    filter: drop-shadow(0 0 1.5px var(--color-palette-pure-white));
 }
 
 .titleContainer {
@@ -129,6 +131,7 @@
     font-family: "Roboto Mono", Helvetica;
     font-size: 4vw;
     font-weight: 700;
+    filter: drop-shadow(0 0 4.5px var(--primary));
 }
 
 .contentContainer {
@@ -150,6 +153,7 @@
     a {
         color: var(--primary);
         text-decoration: none;
+        filter: drop-shadow(0 0 3px var(--primary));
     }
 
 }

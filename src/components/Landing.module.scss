@@ -60,6 +60,7 @@
     color: var(--color-palette-pure-white);
     font-family: 'Roboto', sans-serif;
     font-size: 3vw;
+    filter: drop-shadow(0 0 1.5px var(--color-palette-pure-white));
 }
 
 .titleContainer {
@@ -79,9 +80,14 @@
     color: var(--color-palette-pure-white);
 }
 
+.caret {
+    filter: drop-shadow(0 0 1.5px var(--color-palette-pure-white));
+}
+
 .name {
     color: var(--primary);
     font-weight: 700;
+    filter: drop-shadow(0 0 4.5px var(--primary));
 }
 
 .photoContainer {
@@ -119,6 +125,7 @@
     transform: translateY(187.5%);
 
     left: 0;
+    filter: drop-shadow(0 0 3px var(--primary));
 }
 
 .image {

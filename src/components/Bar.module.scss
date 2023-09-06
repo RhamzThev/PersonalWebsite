@@ -129,6 +129,12 @@
 
 .ItemImg {
   width: 5vw;
+  transition: all 0.25s;
+}
+
+.ItemImg:hover {
+  filter: drop-shadow(0 0 0.5px white);
+  transform: scale(1.05);
 }
 
 .Item {
@@ -145,8 +151,8 @@
 }
 
 .Item:hover {
-  border-color: var(--color-palette-pure-white);
-  font-weight: bold;
+  filter: drop-shadow(0 0 1.5px white);
+  transform: scale(1.05);
 }
 
 .ContactItemContainer {
@@ -158,10 +164,7 @@
 
   display: flex;
   align-items: center;
-  filter: drop-shadow(0 0.5rem 0.25rem black);
 }
-
-.ContactItem {}
 
 .Bar__Sidebar {
   display: none;
