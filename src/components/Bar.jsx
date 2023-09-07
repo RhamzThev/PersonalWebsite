@@ -1,8 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import styles from "./Bar.module.scss";
+import Contact from "../components/Contact";
+import { useState, useContext, createContext } from "react";
+
+export const Context = createContext(false);
 
 function Items() {
+
+  const { isChecked, setIsChecked } = useContext(Context);
+
   return (
     <ul className={styles.Items}>
       <div className={styles.ItemLogo}>
@@ -14,10 +21,10 @@ function Items() {
       </div>
       <div className={styles.ItemLinks}>
         <li className={styles.Item}>
-          <Link href="#about">About</Link>
+          <Link href="#about" onClick={() => setIsChecked(false)}>About</Link>
         </li>
         <li className={styles.Item}>
-          <Link href="#experience">
+          <Link href="#experience" onClick={() => setIsChecked(false)}>
             Experience
           </Link>
         </li>
@@ -34,14 +41,19 @@ function Items() {
 }
 
 function Sidebar() {
+
+  const { isChecked, setIsChecked } = useContext(Context);
+
   return (
     <div className={styles.Sidebar}>
-      <input type="checkbox" className={styles.BurgerCheck} />
+      <input type="checkbox" className={styles.BurgerCheck} checked={isChecked} onClick={() => setIsChecked(!isChecked)} />
       <div className={styles.Sidebar__Burger}>
         <div className={styles.Burger} />
       </div>
       <div className={styles.Sidebar__Items}>
         <Items />
+        <Contact />
+
       </div>
     </div>
   );
@@ -56,14 +68,19 @@ function Navbar() {
 }
 
 export default function Bar() {
+
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
-    <div className={styles.Bar}>
-      <div className={styles.Bar__Sidebar}>
-        <Sidebar />
+    <Context.Provider value={{ isChecked, setIsChecked }}>
+      <div className={styles.Bar}>
+        <div className={styles.Bar__Sidebar}>
+          <Sidebar />
+        </div>
+        <div className={styles.Bar__Navbar}>
+          <Navbar />
+        </div>
       </div>
-      <div className={styles.Bar__Navbar}>
-        <Navbar />
-      </div>
-    </div>
+    </Context.Provider>
   );
 }

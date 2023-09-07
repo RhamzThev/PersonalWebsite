@@ -187,24 +187,29 @@
     padding: 0;
   }
 
+  .ContactItemContainer {
+    display: none;
+  }
+
   .ItemLinks {
     flex-direction: column;
-    // justify-content: space-between;
+    justify-content: center;
 
     align-items: start;
 
     width: 100vw;
-    height: 25vh;
+    height: auto;
 
     padding: 0;
 
-    margin-top: 22.5vw;
+    margin-top: 15vw;
     margin-left: 7.5vw;
   }
 
   .Item {
     font-size: 7.5vw;
     width: auto;
+    margin-top: 7.5vw;
   }
 
   .Item:hover {

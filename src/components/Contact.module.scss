@@ -80,6 +80,8 @@
 @media (orientation: portrait) {
 
     .ContactContainer {
+        position: fixed;
+        bottom: 0;
         width: 100vw;
         padding: 0;
     }

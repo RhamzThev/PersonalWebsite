@@ -107,7 +107,10 @@ export default function Index() {
         <Landing />
         <About />
         <Experience />
-        <Contact />
+
+        <div className={styles.contact} >
+          <Contact />
+        </div>
       </main>
     </div>
   );
