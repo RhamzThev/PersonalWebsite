@@ -108,7 +108,7 @@ export default function Index() {
         <About />
         <Experience />
 
-        <div className={styles.contact} >
+        <div className={styles.contact} id="contact">
           <Contact />
         </div>
       </main>

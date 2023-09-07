@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Contact = () => {
     return (
-        <div className={styles.ContactContainer} id="contact">
+        <div className={styles.ContactContainer}>
             <div className={styles.Contact}>
                 <Link href="https://github.com/RhamzThev">
                     <div className={styles.GitHubContainer}>
