@@ -9,6 +9,9 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
+import { faFileLines } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from "next/link";
 
 export default function Index() {
 
@@ -111,6 +114,13 @@ export default function Index() {
         <div className={styles.contact} id="contact">
           <Contact />
         </div>
+
+        <Link href="/resume">
+          <div className={styles.FileLinesContnainer}>
+            <FontAwesomeIcon className={styles.FileLines} icon={faFileLines} />
+          </div>
+        </Link>
+
       </main>
     </div>
   );

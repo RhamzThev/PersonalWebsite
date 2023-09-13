@@ -132,6 +132,38 @@
     width: 100%;
 }
 
+.designContainer {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    filter: drop-shadow(0 0 3px var(--primary));
+}
+
+.design {
+    // height: 0.33rem;
+    height: 100%;
+    width: 100%;
+    // filter: contrast(0) sepia(100%) hue-rotate(-57.5deg) saturate(2000%) brightness(100%);
+
+    position: absolute;
+
+    transform: translateY(1rem);
+
+    // background-image: url("../public/landing.png");
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: center;
+
+    -webkit-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-composite: source-out;
+
+    background-color: var(--primary);
+}
+
 @media (orientation: portrait) {
     .landing {
         width: 90%;

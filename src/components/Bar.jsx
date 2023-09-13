@@ -3,12 +3,14 @@ import Link from "next/link";
 import styles from "./Bar.module.scss";
 import Contact from "../components/Contact";
 import { useState, useContext, createContext } from "react";
+import { faFileLines } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Context = createContext(false);
 
 function Items() {
 
-  const { isChecked, setIsChecked } = useContext(Context);
+  const { setIsChecked } = useContext(Context);
 
   return (
     <ul className={styles.Items}>
@@ -35,6 +37,14 @@ function Items() {
             </div>
           </Link>
         </li>
+        <div className={styles.FileLinesContnainer}>
+          <li className={styles.Item}>
+            <Link href="/resume">
+              <FontAwesomeIcon className={styles.FileLines} icon={faFileLines} />
+            </Link>
+          </li>
+        </div>
+
       </div>
     </ul>
   );
@@ -46,7 +56,7 @@ function Sidebar() {
 
   return (
     <div className={styles.Sidebar}>
-      <input type="checkbox" className={styles.BurgerCheck} checked={isChecked} onClick={() => setIsChecked(!isChecked)} />
+      <input type="checkbox" className={styles.BurgerCheck} checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
       <div className={styles.Sidebar__Burger}>
         <div className={styles.Burger} />
       </div>

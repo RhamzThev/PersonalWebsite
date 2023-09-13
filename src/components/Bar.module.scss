@@ -170,6 +170,10 @@
   display: none;
 }
 
+.FileLinesContnainer {
+  display: none;
+}
+
 @media (orientation: portrait) {
   .Bar__Sidebar {
     display: block;
@@ -214,5 +218,19 @@
 
   .Item:hover {
     border-color: transparent;
+  }
+
+  .FileLinesContnainer {
+    color: var(--color-palette-pure-white);
+    display: flex;
+
+    .Item {
+      margin: 0;
+    }
+
+  }
+
+  .FileLines {
+    font-size: 15vw;
   }
 }

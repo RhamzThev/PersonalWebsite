@@ -23,8 +23,11 @@ const Landing = () => {
           </div>
           <div className={styles.photoContainer}>
             <div className={styles.photo}>
-              <img className={styles.subtract} alt="Design" src="landing.svg" />
               <img className={styles.image} alt="Portrait" src="landing.png" />
+              <div className={styles.designContainer}>
+                <div className={styles.design} />
+              </div>
+              {/* <img className={styles.subtract} alt="Design" src="landing.svg" /> */}
             </div>
           </div>
         </div>
