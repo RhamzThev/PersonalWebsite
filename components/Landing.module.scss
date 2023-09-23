@@ -149,19 +149,47 @@
     position: absolute;
 
     transform: translateY(1rem);
+}
 
-    // background-image: url("../public/landing.png");
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: center;
+@supports (mask-composite: source-out) {
+    .design {
+        // background-image: url("../public/landing.png");
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     background-position: center;
 
-    -webkit-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-composite: source-out;
+        -moz-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
+        -ms-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
+        -o-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
+        -webkit-mask-image: url("../public/landing.png"), url("../public/landingmask.png");
+        mask-image: url("../public/landing.png"), url("../public/landingmask.png");
 
-    background-color: var(--primary);
+        -moz-mask-repeat: no-repeat;
+        -ms-mask-repeat: no-repeat;
+        -o-mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        -moz-mask-size: contain;
+        -ms-mask-size: contain;
+        -o-mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+
+        -moz-mask-position: center;
+        -ms-mask-position: center;
+        -o-mask-position: center;
+        -webkit-mask-position: center;
+        mask-position: center;
+
+        -moz-mask-composite: source-out;
+        -ms-mask-composite: source-out;
+        -o-mask-composite: source-out;
+        -webkit-mask-composite: source-out;
+        mask-composite: source-out;
+
+        background-color: var(--primary);
+    }
 }
 
 @media (orientation: portrait) {

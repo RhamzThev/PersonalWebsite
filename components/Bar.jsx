@@ -5,6 +5,9 @@ import Contact from "../components/Contact";
 import { useState, useContext, createContext } from "react";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from 'classnames/bind';
+
+let cx = classNames.bind(styles);
 
 export const Context = createContext(false);
 
@@ -30,21 +33,20 @@ function Items() {
             Experience
           </Link>
         </li>
-        <li className={styles.Item}>
+        <li className={cx(styles.Item, styles.ItemContact)}>
           <Link href="#contact">
             <div className={styles.ContactItemContainer}>
               <div className={styles.ContactItem}>Contact</div>
             </div>
           </Link>
         </li>
-        <div className={styles.FileLinesContnainer}>
-          <li className={styles.Item}>
-            <Link href="/resume">
-              <FontAwesomeIcon className={styles.FileLines} icon={faFileLines} />
-            </Link>
-          </li>
-        </div>
-
+        <li className={styles.Item}>
+          <Link href="/resume">
+            <div className={styles.ResumeItemContainer}>
+              <div className={styles.ResumeItem}>Resume</div>
+            </div>
+          </Link>
+        </li>
       </div>
     </ul>
   );
@@ -63,7 +65,6 @@ function Sidebar() {
       <div className={styles.Sidebar__Items}>
         <Items />
         <Contact />
-
       </div>
     </div>
   );

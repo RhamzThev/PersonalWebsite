@@ -20,7 +20,7 @@ const About = () => {
                         <div className={styles.text}>
 
                             <div className={styles.subtitleContainer}>
-                                <div className={styles.subtitle}>I&apos;m a</div>
+                                <div className={styles.subtitle}>I&apos;m a&#40;n&#41;</div>
                             </div>
 
                             <div className={styles.titleContainer}>

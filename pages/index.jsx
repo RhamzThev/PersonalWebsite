@@ -115,11 +115,11 @@ export default function Index() {
           <Contact />
         </div>
 
-        <Link href="/resume">
+        {/* <Link href="/resume">
           <div className={styles.FileLinesContnainer}>
             <FontAwesomeIcon className={styles.FileLines} icon={faFileLines} />
           </div>
-        </Link>
+        </Link> */}
 
       </main>
     </div>

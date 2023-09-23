@@ -34,10 +34,9 @@
     transform: scale(1.1);
 }
 
-@media (orientation: portrait) {
+@media (max-device-width: 900px) {
 
-    .contact,
-    .FileLinesContnainer {
+    .contact {
         display: none;
     }
 }
