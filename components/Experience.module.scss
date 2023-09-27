@@ -152,6 +152,7 @@
 }
 
 .upContainer:hover,
+.image:hover,
 .downContainer:hover {
     transform: scale(1.025);
 }
@@ -199,6 +200,7 @@
 .image {
     width: 100%;
     cursor: pointer;
+    transition: all 0.25s;
 }
 
 .design {
