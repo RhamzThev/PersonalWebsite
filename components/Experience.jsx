@@ -6,11 +6,18 @@ import Panel from "./Panel";
 
 const exps = [
     {
-        "title": "MIT 2.009 2022 Website",
-        "date": "Sep. 2022 - Nov. 2022",
-        "content": "This project was worked on during the course of the 2022 fall semester. This was for a Product Engineering course from the Massachusetts Institute of Technology. My responsibility was to transform mockups into working code, as well as implementing an exisiting back-end into the website.",
-        "image": "/projects/2009.jpg",
-        "link": "https://2022.2009.mit.edu/"
+        "title": "Terre Website",
+        "date": "Aug. 2024 - Present",
+        "content": "I have this idea of creating an Earth with a timeline, and based on the time and day you go to, It will show all major occuring events during that time. This is what I want Terre to be. This is a WIP.",
+        "image": "/projects/terre.jpg",
+        "link": "https://terre.rhamzthev.com/"
+    },
+    {
+        "title": "Midnight Mansion Website(s)",
+        "date": "Dec. 2022 - Dec. 2022",
+        "content": "For the winter break, I helped with creating websites for Midnight Mansion. These websites would include the launch website that's shown here, as well as a business-facing website.",
+        "image": "/projects/midnightmansion.jpg",
+        "link": "https://www.midnightmansion.com/"
     },
     {
         "title": "MIT 2.009 2022 Final Presentation Website",
@@ -20,12 +27,12 @@ const exps = [
         "link": "https://www.009move.com/"
     },
     {
-        "title": "Midnight Mansion Website(s)",
-        "date": "Dec. 2022 - Dec. 2022",
-        "content": "For the winter break, I helped with creating websites for Midnight Mansion. These websites would include the launch website that's shown here, as well as a business-facing website.",
-        "image": "/projects/midnightmansion.jpg",
-        "link": "https://www.midnightmansion.com/"
-    }
+        "title": "MIT 2.009 2022 Website",
+        "date": "Sep. 2022 - Nov. 2022",
+        "content": "This project was worked on during the course of the 2022 fall semester. This was for a Product Engineering course from the Massachusetts Institute of Technology. My responsibility was to transform mockups into working code, as well as implementing an exisiting back-end into the website.",
+        "image": "/projects/2009.jpg",
+        "link": "https://2022.2009.mit.edu/"
+    },
 ]
 
 const Experience = () => {
